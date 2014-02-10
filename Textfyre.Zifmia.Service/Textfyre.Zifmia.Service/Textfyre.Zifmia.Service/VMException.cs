@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace FyreVM
+namespace Textfyre.VM
 {
     // TODO: include Glulx backtrace in VM exceptions?
 

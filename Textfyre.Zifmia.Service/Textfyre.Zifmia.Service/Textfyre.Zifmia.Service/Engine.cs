@@ -11,7 +11,7 @@ using System.Reflection;
 using System.Diagnostics;
 using System.ComponentModel;
 
-namespace FyreVM
+namespace Textfyre.VM
 {
     /// <summary>
     /// Provides data for an input line request event.
@@ -66,13 +66,13 @@ namespace FyreVM
     /// </summary>
     public class OutputReadyEventArgs : EventArgs
     {
-        private IDictionary<string, string> package;
+        private IDictionary<OutputChannel, string> package;
 
         /// <summary>
         /// Gets or sets a dictionary containing the text that has been
         /// captured on each output channel since the last output delivery.
         /// </summary>
-        public IDictionary<string, string> Package
+        public IDictionary<OutputChannel, string> Package
         {
             get { return package; }
             set { package = value; }

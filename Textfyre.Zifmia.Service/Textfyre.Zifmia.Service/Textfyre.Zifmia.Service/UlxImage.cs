@@ -8,7 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace FyreVM
+namespace Textfyre.VM
 {
     /// <summary>
     /// Represents the ROM and RAM of a Glulx game image.

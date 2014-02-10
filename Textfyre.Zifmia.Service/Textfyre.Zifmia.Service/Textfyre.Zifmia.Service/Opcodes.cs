@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-namespace FyreVM
+namespace Textfyre.VM
 {
     /// <summary>
     /// A delegate type for methods that implement Glulx opcodes.

@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.IO;
 
-namespace FyreVM.Profiling
+namespace Textfyre.VM.Profiling
 {
     /// <summary>
     /// Describes a routine and collects performance statistics about it.

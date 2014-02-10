@@ -9,13 +9,13 @@ using System.Linq;
 using System.Text;
 using System.Xml;
 
-namespace FyreVM
+namespace Textfyre.VM
 {
     /// <summary>
     /// Collects output from the game file, on various output channels, to be
     /// delivered all at once.
     /// </summary>
-    internal class OutputBuffer
+    public class OutputBuffer
     {
         private const uint DEFAULT_CHANNEL = ('M' << 24) | ('A' << 16) | ('I' << 8) | 'N';
         private uint channel = ('M' << 24) | ('A' << 16) | ('I' << 8) | 'N';
@@ -88,17 +88,17 @@ namespace FyreVM
         /// </summary>
         /// <returns>A dictionary mapping each active output channel to the
         /// string of text that has been sent to it since the last flush.</returns>
-        public IDictionary<string, string> Flush()
+        public IDictionary<OutputChannel, string> Flush()
         {
-            Dictionary<string, string> result = new Dictionary<string, string>();
+            Dictionary<OutputChannel, string> result = new Dictionary<OutputChannel, string>();
 
             foreach (KeyValuePair<uint, StringBuilder> pair in channelData)
             {
                 string channelName = GetChannelName(pair.Key);
-
+                OutputChannel channelOutput = (OutputChannel) Enum.ToObject(typeof (OutputChannel), pair.Key);
                 if (pair.Value.Length > 0)
                 {
-                    result.Add(channelName, pair.Value.ToString());
+                    result.Add(channelOutput, pair.Value.ToString());
                     pair.Value.Length = 0;
                 }
             }

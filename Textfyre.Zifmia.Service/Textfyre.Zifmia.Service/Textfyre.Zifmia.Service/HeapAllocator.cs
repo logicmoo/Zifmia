@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace FyreVM
+namespace Textfyre.VM
 {
     internal struct HeapEntry
     {

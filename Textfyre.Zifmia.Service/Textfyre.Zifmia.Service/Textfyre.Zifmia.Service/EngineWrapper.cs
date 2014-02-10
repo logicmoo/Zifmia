@@ -5,9 +5,9 @@ using System.IO;
 using System.Xml;
 using System.Text;
 using System.Diagnostics;
-using Newtonsoft.Json;
+//using Newtonsoft.Json;
 
-using FyreVM;
+using Textfyre.VM;
 
 namespace Zifmia.FyreVM.Service
 {

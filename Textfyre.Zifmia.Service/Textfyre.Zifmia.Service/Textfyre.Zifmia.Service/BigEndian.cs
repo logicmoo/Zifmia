@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.IO;
 
-namespace FyreVM
+namespace Textfyre.VM
 {
     /// <summary>
     /// Provides utility functions for working with big-endian numbers.
